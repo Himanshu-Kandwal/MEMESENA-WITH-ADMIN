@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/cropper/build/
+/cropper/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/

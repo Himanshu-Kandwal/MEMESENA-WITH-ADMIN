@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- <item
+         android:id="@+id/menu_app"
+         android:icon="@drawable/ic_apps"
+         android:title="App : v1.0" />-->
+    <item
+        android:id="@+id/menu_shareapp"
+        android:icon="@drawable/ic_share"
+        android:title="@string/labal_share_app" />
+    <item
+        android:id="@+id/menu_rateapp"
+        android:icon="@drawable/ic_rate_review"
+        android:title="@string/labal_rate_app" />
+    <item
+        android:id="@+id/menu_privacypolicy"
+        android:icon="@drawable/ic_privacy_policy"
+        android:title="@string/labal_privacy_policy" />
+    <item
+        android:id="@+id/menu_findmoreapps"
+        android:icon="@drawable/ic_apps"
+        android:visible="false"
+        android:title="@string/labal_find_more_apps" />
+    <item
+        android:id="@+id/menu_insta"
+        android:icon="@drawable/instagram"
+        android:title="MeneSena Official"
+        />
+    <item
+        android:id="@+id/menu_twitter"
+        android:icon="@drawable/twitter"
+        android:title="Follow on Twitter"
+        />
+
+    <item
+        android:id="@+id/menu_telegram"
+        android:icon="@drawable/telegram"
+        android:title="Join Telegram"
+        />
+    <item
+        android:id="@+id/menu_website"
+        android:icon="@drawable/www"
+        android:title="Check our Website"
+        />
+</menu>

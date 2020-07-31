@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.google.gms:google-services:4.2.0' // google-services plugin
+
+        //--------- photoediter
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
+        classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://maven.google.com" }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex')) {
+                details.useVersion "28.0.0"
+            }
+        }
+    }
+
+    ext {
+        supportLibraryVersion = '28.0.0'
+        PUBLISH_GROUP_ID = 'com.theartofdev.edmodo'
+        PUBLISH_ARTIFACT_ID = 'android-image-cropper'
+        PUBLISH_VERSION = '2.8.0'
+    }
+}

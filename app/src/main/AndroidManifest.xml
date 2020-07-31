@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="msm.MemeSena">
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="msm.MemeSena.MyAppClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <!--tools:node="replace"-->
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/appIDAdmob" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+
+
+        <activity android:name="msm.MemeSena.AppStickerActivity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name="msm.MemeSena.AppStickerActivity.DashboardActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_sticker_pack_list"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <data android:mimeType="*/*" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="msm.MemeSena.AppStickerActivity.StickerPackListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_sticker_pack_list"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name="msm.MemeSena.AppStickerActivity.CreateOwnStickerActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="msm.MemeSena.AppStickerActivity.StickerPackDetailsActivity"
+            android:parentActivityName="msm.MemeSena.AppStickerActivity.DashboardActivity"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="msm.MemeSena.AppStickerActivity.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="msm.MemeSena.AppStickerActivity.StickerPackInfoActivity"
+            android:label="@string/title_activity_info"
+            android:parentActivityName="msm.MemeSena.AppStickerActivity.StickerPackDetailsActivity"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="msm.MemeSena.AppStickerActivity.StickerPackDetailsActivity" />
+        </activity>
+
+        <activity android:name="msm.MemeSena.AppStickerActivity.PrivacyPolicyActivity" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
+        <activity android:name="msm.MemeSena.ImageEraser.ImageEraserActivity" />
+        <activity android:name="msm.MemeSena.AppStickerActivity.NewUserIntroActivity" />
+
+        <service android:name="msm.MemeSena.FCM.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <provider
+            android:name="msm.MemeSena.Utils.StickerContentProvider"
+            android:authorities="${contentProviderAuthority}"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ"></provider>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ae8696c9f626fd42728f7563dcd18f9e781c6a2a" />
+    </application>
+
+</manifest>

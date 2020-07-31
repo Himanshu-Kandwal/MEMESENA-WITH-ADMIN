@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "755431532517",
+    "firebase_url": "https://meme-sena.firebaseio.com",
+    "project_id": "meme-sena",
+    "storage_bucket": "meme-sena.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755431532517:android:e50fbe19cef14e22deb10c",
+        "android_client_info": {
+          "package_name": "com.msm.MemeSena"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755431532517-ctg3mdnqv00i84flk0iaujsalbi8ug4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg0AKg4F-aTYZIhUehuzHtaTTGDJXq2_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755431532517-ctg3mdnqv00i84flk0iaujsalbi8ug4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

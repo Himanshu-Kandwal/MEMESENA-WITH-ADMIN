@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatDelegate;
-
+import com.onesignal.OneSignal;
 
 import com.downloader.PRDownloader;
 import com.downloader.PRDownloaderConfig;
@@ -21,6 +21,11 @@ public class MyAppClass extends Application {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         //Fabric.with(this, new Crashlytics());
         Fresco.initialize(this);
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
 
         // Setting timeout globally for the download network requests:
         PRDownloaderConfig config = PRDownloaderConfig.newBuilder().build();

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MEMESENA-WITH-ADMIN.iml" filepath="$PROJECT_DIR$/.idea/modules/MEMESENA-WITH-ADMIN.iml" group="MEMESENA-WITH-ADMIN" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="MEMESENA-WITH-ADMIN/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cropper/cropper.iml" filepath="$PROJECT_DIR$/.idea/modules/cropper/cropper.iml" group="MEMESENA-WITH-ADMIN/cropper" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoeditor/photoeditor.iml" filepath="$PROJECT_DIR$/.idea/modules/photoeditor/photoeditor.iml" group="MEMESENA-WITH-ADMIN/photoeditor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MEMESENA-WITH-ADMIN1.iml" filepath="$PROJECT_DIR$/.idea/modules/MEMESENA-WITH-ADMIN1.iml" group="MEMESENA-WITH-ADMIN1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="MEMESENA-WITH-ADMIN1/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cropper/cropper.iml" filepath="$PROJECT_DIR$/.idea/modules/cropper/cropper.iml" group="MEMESENA-WITH-ADMIN1/cropper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoeditor/photoeditor.iml" filepath="$PROJECT_DIR$/.idea/modules/photoeditor/photoeditor.iml" group="MEMESENA-WITH-ADMIN1/photoeditor" />
     </modules>
   </component>
 </project>

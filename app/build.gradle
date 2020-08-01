@@ -14,6 +14,19 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
     mavenCentral()
 }
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.8, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
 
 
 android {
@@ -32,12 +45,18 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         def contentProviderAuthority = applicationId + ".MyStickerMakerCombineAppContentProviderTest"
         // Creates a placeholder property to use in the manifest.
-        manifestPlaceholders =
+
                 [contentProviderAuthority: contentProviderAuthority]
         // Adds a new field for the authority to the BuildConfig class.
         buildConfigField("String",
                 "CONTENT_PROVIDER_AUTHORITY",
                 "\"${contentProviderAuthority}\"")
+        manifestPlaceholders = [
+                onesignal_app_id: '2f90da98-a00b-45ef-9484-e56c8dd650f4',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE',
+                contentProviderAuthority: contentProviderAuthority
+                ]
     }
     buildTypes {
         release {
@@ -60,7 +79,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-
+    implementation 'com.onesignal:OneSignal:[3.15.0, 3.99.99]'
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
     implementation 'com.google.firebase:firebase-core:16.0.7'
     //implementation 'com.google.firebase:firebase-core:16.0.7'

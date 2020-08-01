@@ -1,13 +1,16 @@
 <component name="libraryTable">
   <library name="Gradle: com.otaliastudios:zoomlayout:1.4.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/zoomlayout-1.4.0.aar/8d427a667a194154e2aed086425d3cb9/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df988583bab9f571eb75d37c78515c68/zoomlayout-1.4.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/zoomlayout-1.4.0.aar/8d427a667a194154e2aed086425d3cb9/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/zoomlayout-1.4.0.aar/8d427a667a194154e2aed086425d3cb9/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df988583bab9f571eb75d37c78515c68/zoomlayout-1.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df988583bab9f571eb75d37c78515c68/zoomlayout-1.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df988583bab9f571eb75d37c78515c68/zoomlayout-1.4.0/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.otaliastudios/zoomlayout/1.4.0/9f765f5f083bdd330ab577c83fd4f4a618f3f5d3/zoomlayout-1.4.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.otaliastudios/zoomlayout/1.4.0/9b0205204436ea7980735b412430d2e5bb1b005/zoomlayout-1.4.0-sources.jar!/" />
     </SOURCES>
